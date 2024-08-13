@@ -23,6 +23,6 @@ This repository includes workflows to assist with publishing releases:
 
 ## Usage
 
-To create a release using the provided workflows, you should push changes to the corresponding release branch by merging into that branch. After merging, the workflow associated with the target branch will be triggered to create the release/prerelease.
+To create a release using the provided workflows, merge changes into the corresponding release branch. This action triggers the associated workflow to create the release or prerelease.
 
-These workflows are provided for convenience and can be used as needed. You may choose to use any or none of these workflows based on your release strategy and requirements. Each workflow is designed to streamline the process of tagging and releasing different stages of your project.
+These workflows are provided for convenience and are optional. Use them as needed based on your release strategy and requirements. Each workflow is designed to streamline tagging and releasing different stages of your project.
