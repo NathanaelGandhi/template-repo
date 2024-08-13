@@ -24,22 +24,18 @@ git clone <repository-url>
 
 - Install [pre-commit](https://pre-commit.com/#install) on your system.
 
-```sh
-pip install pre-commit
-```
-
 - Install pre-commit hooks into your local repo clone.
 
-```sh
-pre-commit install
-```
+  ```sh
+  pre-commit install
+  ```
 
 ### Release Management
 
 <!-- This repository does not follow a release branching strategy. -->
-This repository follows a release branching strategy finishing with `release`.
-<!-- This repository follows a release branching strategy starting with `release-candidate` and finishing with `release`. -->
-<!-- This repository follows a release branching strategy starting with `release-beta`, progressing to `release-candidate`, and finishing with `release`. -->
+"This repository follows a release branching strategy that publishes stable versions to the `release` branch."
+<!-- This repository follows a release branching strategy that starts with `release-candidate` and publishes stable versions to `release`. -->
+<!-- This repository follows a release branching strategy that begins with `release-beta`, progresses to `release-candidate`, and publishes stable versions to `release`. -->
 
 This repository automatically creates releases from corresponding release branches. See [release_workflows.md](docs/release_workflows.md).
 
