@@ -10,9 +10,9 @@
 
 - Clone this repo locally.
 
-```sh
-git clone <repository-url>
-```
+  ```sh
+  git clone <repository-url>
+  ```
 
 <!-- ### Usage -->
 
