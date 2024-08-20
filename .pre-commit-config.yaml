@@ -1,3 +1,4 @@
+---
 ci:
   autofix_prs: false
 fail_fast: false
@@ -29,6 +30,14 @@ repos:
         args: [--style=file]
         types_or: [c++, c, cuda]
         require_serial: true
+  # CMake
+  - repo: https://github.com/cheshirekow/cmake-format-precommit
+    rev: v0.6.13
+    hooks:
+      - id: cmake-format
+        additional_dependencies: [pyyaml>=5.1]
+      - id: cmake-lint
+        additional_dependencies: [pyyaml>=5.1]
   # GitHub Actions
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.1
