@@ -43,10 +43,19 @@ This repository automatically creates releases from corresponding release branch
 
 Fetch the latest changes from the `release` branch of the _remote template repository_, and then merge those changes into your current branch, allowing for unrelated histories.
 
-```sh
-git fetch https://github.com/NathanaelGandhi/template-repo release \
-  && git merge FETCH_HEAD --allow-unrelated-histories
-```
+- Fetch upstream template via HTTPS:
+
+  ```sh
+  git fetch https://github.com/NathanaelGandhi/template-repo release \
+    && git merge FETCH_HEAD --allow-unrelated-histories
+  ```
+
+- Fetch upstream template via SSH:
+
+  ```sh
+  git fetch git@github.com:NathanaelGandhi/template-repo.git release \
+    && git merge FETCH_HEAD --allow-unrelated-histories
+  ```
 
 _If there are merge conflicts, resolve them, `git add` the changes, and continue the merge with `git commit`._
 
