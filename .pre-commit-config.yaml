@@ -1,9 +1,10 @@
+---
 ci:
   autofix_prs: false
 fail_fast: false
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -23,15 +24,23 @@ repos:
       - id: trailing-whitespace
   # C || C++ || Cuda
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v18.1.8
+    rev: v20.1.8
     hooks:
       - id: clang-format
         args: [--style=file]
         types_or: [c++, c, cuda]
         require_serial: true
+  # CMake
+  - repo: https://github.com/cheshirekow/cmake-format-precommit
+    rev: v0.6.13
+    hooks:
+      - id: cmake-format
+        additional_dependencies: [pyyaml>=5.1]
+      - id: cmake-lint
+        additional_dependencies: [pyyaml>=5.1]
   # GitHub Actions
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.1
+    rev: v1.7.7
     hooks:
       - id: actionlint
   # JSON
@@ -41,11 +50,11 @@ repos:
       - id: check-json5
   # Python
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.4.2
+    rev: 25.1.0
     hooks:
       - id: black
   - repo: https://github.com/asottile/reorder-python-imports
-    rev: v3.13.0
+    rev: v3.15.0
     hooks:
       - id: reorder-python-imports
   # Shell
@@ -56,6 +65,6 @@ repos:
         args: [-x]
   # YAML
   - repo: https://github.com/google/yamlfmt
-    rev: v0.13.0
+    rev: v0.17.2
     hooks:
       - id: yamlfmt
