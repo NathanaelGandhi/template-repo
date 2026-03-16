@@ -30,7 +30,7 @@ jobs:
           echo "Output version: ${version}"
       - name: Create release
         id: create_release
-        uses: release-drafter/release-drafter@v6
+        uses: release-drafter/release-drafter@v7
         with:
           config-name: release-drafter-config.yml
           disable-autolabeler: true
